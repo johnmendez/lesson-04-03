@@ -11,17 +11,16 @@ export default function reducer(state, action) {
     // READ: Loading all snacks
     case 'SNACK@FIND_ALL':
       return { snacks: [...action.data, ...state.snacks] };
+    // READ: Loading all cereal
+    case 'BEST_CEREAL@SET':
+      return { bestCereal: action.data };
     default:
-      return state || { snacks: [] };
+      return state || { snacks: [], bestCereal: null };
   }
   // READ: Load a single snack
   // UPDATE: Update the data for a single snack
   // DESTROY: Remove a snack from the list
 }
-
-
-
-
 
 // if (state) {
 //   return state;
