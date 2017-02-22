@@ -13,7 +13,7 @@ module('reducer', () => {
 
     assert.deepEqual(reducer(oldState, actionOne), { snacks: actionOne.data });
     assert.deepEqual(reducer(oldState, actionTwo), { snacks: actionTwo.data });
-    assert.deepEqual(reducer(oldStateTwo, actionOne), { snacks: actionOne.data });
+    assert.deepEqual(reducer(oldStateTwo, actionOne), { snacks: [1, 2, 3, 8, 9] });
   });
 
   test('add a snack', (assert) => {
