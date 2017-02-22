@@ -10,7 +10,7 @@ export default function reducer(state, action) {
       return { snacks: [action.data, ...state.snacks] };
     // READ: Loading all snacks
     case 'SNACK@FIND_ALL':
-      return { snacks: action.data };
+      return { snacks: [...action.data, ...state.snacks] };
     default:
       return state || { snacks: [] };
   }
